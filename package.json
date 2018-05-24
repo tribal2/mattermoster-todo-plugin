@@ -1,0 +1,18 @@
+{
+  "name": "mattermoster-todo-plugin",
+  "version": "0.0.1",
+  "description": "ToDo plugin for 'mattermoster' based on Node.js + Express + MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mattermost",
+    "slack",
+    "integration",
+    "slash-command",
+    "mattermoster"
+  ],
+  "author": "Ricardo Tribaldos <ricardo@tribaldos.org> (http://ricardo.tribaldos.org)",
+  "license": "MIT"
+}
