@@ -121,7 +121,9 @@ You are done. Now try your new **Custom Slash Command** in any channel or direct
 
 Want to contribute? Great, we are waiting for your PRs.
 ```sh
-$ npm install --save mattermoster-todo-plugin
+$ git clone https://github.com/swordf1zh/mattermoster-todo-plugin.git
+$ cd mattermoster-todo-plugin
+$ npm install
 $ npm run dev
 ```
 ### Todos
