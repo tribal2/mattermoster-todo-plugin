@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+const MattermosterClass = require('mattermoster');
+const todoRouter = require('../');
+
+const mattermoster = new MattermosterClass;
+//const mattermoster = new MattermosterClass('es');
+
+mattermoster.addPlugin('/todo', todoRouter);
+mattermoster.init();

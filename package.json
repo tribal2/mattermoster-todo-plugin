@@ -1,6 +1,6 @@
 {
   "name": "mattermoster-todo-plugin",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "ToDo plugin for 'mattermoster-base' based on Node.js + Express + MySQL",
   "main": "index.js",
   "repository": {
@@ -8,6 +8,8 @@
     "url": "https://github.com/swordf1zh/mattermoster-todo-plugin.git"
   },
   "scripts": {
+    "start": "node ./bin/www",
+    "dev": "SET DEBUG=mattermoster:* i18n:* && nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,6 +25,7 @@
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "i18n": "^0.8.3",
+    "mattermoster": "^1.0.0",
     "moment": "^2.22.1",
     "mysql": "^2.15.0"
   }
