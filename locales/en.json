@@ -1,14 +1,14 @@
 {
-  "slash_command": "todo",
+	"slash_command": "todo",
 	"cmd_new_1": "new",
-  "cmd_new_2": "add",
-  "cmd_new_3": "+",
-  "cmd_new_nc_1": "new_quiet",
-  "cmd_new_nc_2": "add_quiet",
-  "cmd_new_nc_3": "+quiet",
-  "cmd_modify_1": "modify",
-  "cmd_modify_2": "change",
-  "cmd_modify_3": "text",
+	"cmd_new_2": "add",
+	"cmd_new_3": "+",
+	"cmd_new_nc_1": "new_quiet",
+	"cmd_new_nc_2": "add_quiet",
+	"cmd_new_nc_3": "+quiet",
+	"cmd_modify_1": "modify",
+	"cmd_modify_2": "change",
+	"cmd_modify_3": "text",
 	"cmd_pending_1": "pending",
 	"cmd_pending_2": "list",
 	"cmd_pending_3": "wip",
@@ -45,5 +45,8 @@
 	"optional text": "optional text",
 	"Marks ToDo item #5 as done and adds 'optional text' as a note to the end of todo text (supplied text is optional)": "Marks ToDo item #5 as done and adds 'optional text' as a note to the end of todo text (supplied text is optional)",
 	"Marks ToDo item #3 as pending": "Marks ToDo item #3 as pending",
-	"Removes ToDo item #9": "Removes ToDo item #9"
+	"Removes ToDo item #9": "Removes ToDo item #9",
+	"Todo Manager": "Todo Manager",
+	"Study usage instructions well": "Study usage instructions well",
+	"Changes text of ToDo item #1 to 'Study usage instructions well'": "Changes text of ToDo item #1 to 'Study usage instructions well'"
 }
