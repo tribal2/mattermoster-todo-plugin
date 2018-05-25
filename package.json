@@ -1,8 +1,12 @@
 {
   "name": "mattermoster-todo-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ToDo plugin for 'mattermoster-base' based on Node.js + Express + MySQL",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swordf1zh/mattermoster-todo-plugin.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,7 +17,7 @@
     "slash-command",
     "mattermoster"
   ],
-  "author": "Ricardo Tribaldos <ricardo@tribaldos.org> (http://ricardo.tribaldos.org)",
+  "author": "Ricardo Tribaldos <ricardo@baru.studio> (http://baru.studio)",
   "license": "MIT",
   "dependencies": {
     "debug": "^3.1.0",
