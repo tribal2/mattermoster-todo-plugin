@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "ToDo plugin for 'mattermoster-base' based on Node.js + Express + MySQL",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swordf1zh/mattermoster-todo-plugin.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
