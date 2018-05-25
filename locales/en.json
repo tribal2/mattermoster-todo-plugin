@@ -48,5 +48,6 @@
 	"Removes ToDo item #9": "Removes ToDo item #9",
 	"Todo Manager": "Todo Manager",
 	"Study usage instructions well": "Study usage instructions well",
-	"Changes text of ToDo item #1 to 'Study usage instructions well'": "Changes text of ToDo item #1 to 'Study usage instructions well'"
+  "Changes text of ToDo item #1 to 'Study usage instructions well'": "Changes text of ToDo item #1 to 'Study usage instructions well'",
+  "No pending ToDos": "No pending ToDos"
 }
