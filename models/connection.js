@@ -3,11 +3,11 @@ const mysql = require('mysql');
 function Connection() {
   this.pool = mysql.createPool({
     connectionLimit: 10,
-    host: process.env.DB_MATTERMOSTER_TODO_HOST || 'localhost',
-    port: process.env.DB_MATTERMOSTER_TODO_PORT || 3306,
-    user: process.env.DB_MATTERMOSTER_TODO_USER || 'mattermoster',
-    password: process.env.DB_MATTERMOSTER_TODO_PASS || 'mattermoster',
-    database: process.env.DB_MATTERMOSTER_TODO_DB || 'mattermoster'
+    host: process.env.MM_TODO_DBHOST || 'localhost',
+    port: process.env.MM_TODO_DBPORT || 3306,
+    user: process.env.MM_TODO_DBUSER || 'mattermoster',
+    password: process.env.MM_TODO_DBPASS || 'mattermoster',
+    database: process.env.MM_TODO_DBNAME || 'mattermoster'
   });
 
   this.acquire = function(callback) {
