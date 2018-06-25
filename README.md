@@ -56,12 +56,15 @@ FLUSH PRIVILEGES;
 --
 CREATE TABLE `todo` (
   `id` INT NOT NULL,
+  `channel_id` varchar(30) DEFAULT NULL,
   `title` VARCHAR(30) NOT NULL,
   `description` VARCHAR(120) NULL,
   `status` VARCHAR(30) NOT NULL,
   `completed` TINYINT NOT NULL DEFAULT 0,
   `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_by` varchar(30) DEFAULT NULL,
+  `updated_by` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`));
 ```
 
