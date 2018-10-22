@@ -58,7 +58,7 @@ FLUSH PRIVILEGES;
 -- 'todo' table creation
 --
 CREATE TABLE `todo` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `channel_id` varchar(30) DEFAULT NULL,
   `description` VARCHAR(120) NULL,
   `completed` TINYINT NOT NULL DEFAULT 0,
