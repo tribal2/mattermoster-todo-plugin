@@ -186,7 +186,7 @@ class MmTodo {
     const locale = this.i18n.getLocale();
     moment.locale(locale);
 
-    if (!todoArr.length) return this.i18n.__("There's no pending ToDo's!") + ' :smiley:';
+    if (!todoArr.length) return this.i18n.__("No pending ToDos") + '! :smiley:';
 
     let todoTxtArr = [];
     todoArr.forEach((todo) => {

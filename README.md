@@ -19,6 +19,9 @@ $ npm install --save mattermoster-todo-plugin
 ### Adding plugin to Mattermoster
 
 ```js
+const MattermosterClass = require('mattermoster');
+const mattermoster = new MattermosterClass;
+
 // ...
 
 /**
@@ -57,9 +60,7 @@ FLUSH PRIVILEGES;
 CREATE TABLE `todo` (
   `id` INT NOT NULL,
   `channel_id` varchar(30) DEFAULT NULL,
-  `title` VARCHAR(30) NOT NULL,
   `description` VARCHAR(120) NULL,
-  `status` VARCHAR(30) NOT NULL,
   `completed` TINYINT NOT NULL DEFAULT 0,
   `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -70,19 +71,35 @@ CREATE TABLE `todo` (
 
 The MySQL connection class will use this parameters:
 
-Parameter | Environment variable      | Default value
---------- | --------------------------|--------------
-host      | DB_MATTERMOSTER_TODO_HOST | localhost
-port      | DB_MATTERMOSTER_TODO_PORT | 3306
-user      | DB_MATTERMOSTER_TODO_USER | mattermoster
-password  | DB_MATTERMOSTER_TODO_PASS | mattermoster
-database  | DB_MATTERMOSTER_TODO_DB   | mattermoster
+Parameter | Environment variable | Default value
+----------|----------------------|--------------
+host      | MM_TODO_DBHOST       | localhost
+port      | MM_TODO_DBPORT       | 3306
+user      | MM_TODO_DBUSER       | mattermoster
+password  | MM_TODO_DBPASS       | mattermoster
+database  | MM_TODO_DBNAME       | mattermoster
 
 If you use a parameter with a non default value, you must set the corresponding environment variable.
 
-## Usage
+### Mattermoster API Server
 
-To create a Custom Slash Command, follow this instructions from [Mattermost documentation](https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command):
+Run your Mattermoster API Server:
+
+```sh
+$ node index.js
+```
+
+You can supply a different port number for your server (defaults to 3000):
+
+```sh
+$ node index.js 12345
+```
+
+> For more information on running Mattermoster API Server read the documentation at [Mattermoster's Github repository](https://github.com/swordf1zh/mattermoster).
+
+## Setting a Custom Slash Command in Mattermost
+
+To create a Custom Slash Command, follow this instructions from [Mattermost's documentation](https://docs.mattermost.com/developer/slash-commands.html#custom-slash-command):
 
 In Mattermost client (web or desktop application)...
 
@@ -92,25 +109,23 @@ In Mattermost client (web or desktop application)...
 
 3 - Set the **Command Trigger Word**. The trigger word must be unique and cannot begin with a slash or contain any spaces. It also cannot be one of the built-in commands.
 
-    Note:
-
-    Mattermoster ToDo Plugin **Command Trigger Word** is dependent on language set on Mattermoster API project.
-
-    To find out **Command Trigger Word**, navigate to Mattermoster_API_root > node_modules > mattermoster-todo-plugin > locales. Open the XX.json file of the language you set (defaults to 'en.json').
-
-    In XX.json look for "slash_command".
-
-    This is the **Command Trigger Word** you must use in Mattermost.
+> Note:
+>
+> Mattermoster ToDo Plugin **Command Trigger Word** is dependent on language set on Mattermoster API project.
+>
+> To find out **Command Trigger Word**, navigate to Mattermoster_API_root > node_modules > mattermoster-todo-plugin > locales. Open the XX.json file of the language you set (defaults to 'en.json').
+>
+> In XX.json look for "slash_command".
+>
+> This is the **Command Trigger Word** you must use in Mattermost.
 
 4 - Set the **Request URL** and **Request Method**. The request URL is the endpoint that Mattermost hits to reach your application, and the request method is either POST or GET and specifies the type of request sent to the request URL.
 
-    Note:
-
-    This is the host:port of your Mattermoster API server.
-
-    **Request Method** must be set to POST.
-
-
+> Note:
+>
+> This is the host:port of your Mattermoster API server.
+>
+> **Request Method** must be set to POST.
 
 5 - (Optional) Set the response username and icon the command will post messages as in Mattermost. If not set, the command will use your username and profile picture.
 
@@ -124,7 +139,9 @@ You are done. Now try your new **Custom Slash Command** in any channel or direct
 
 Want to contribute? Great, we are waiting for your PRs.
 ```sh
-$ npm install --save mattermoster-todo-plugin
+$ git clone https://github.com/swordf1zh/mattermoster-todo-plugin.git
+$ cd mattermoster-todo-plugin
+$ npm install
 $ npm run dev
 ```
 ### Todos
@@ -139,6 +156,5 @@ If you are running Mattermoster in the same machine that is running Mattermost, 
 ## License
 
 MIT
-
 
 **Free Software, Hell Yeah!**
