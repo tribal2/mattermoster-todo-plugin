@@ -1,6 +1,6 @@
 {
   "name": "mattermoster-todo-plugin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ToDo plugin for Mattermoster based on Node.js + Express + MySQL",
   "main": "index.js",
   "repository": {
@@ -25,7 +25,7 @@
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "i18n": "^0.8.3",
-    "mattermoster": "^1.0.0",
+    "mattermoster": "^1.1.0",
     "moment": "^2.22.1",
     "mysql": "^2.15.0"
   },
